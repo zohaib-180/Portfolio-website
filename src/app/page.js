@@ -74,8 +74,8 @@ export default function Home() {
           {/* Image Section */}
           <div className="md:w-1/2">
             <Image
-              height={200}
-              width={200}
+              height={500}
+              width={500}
               src="/profile-pic.jpeg" // Replace with your actual image
               alt="Malik Zohaib"
               className="w-full  max-w-sm mx-auto rounded-lg shadow-lg"
