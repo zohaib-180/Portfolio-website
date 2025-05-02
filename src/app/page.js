@@ -57,7 +57,7 @@ export default function Home() {
           {/* Text Section */}
           <div className="md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
-              Hi, I'm Malik Zohaib
+              Hi, I&apos;m Malik Zohaib
             </h1>
             <p className="text-lg md:text-xl mb-8">
               A professional Graphic Designer, web developer (React JS & Next
@@ -73,10 +73,12 @@ export default function Home() {
 
           {/* Image Section */}
           <div className="md:w-1/2">
-            <img
+            <Image
+              height={200}
+              width={200}
               src="/profile-pic.jpeg" // Replace with your actual image
               alt="Malik Zohaib"
-              className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
+              className="w-full  max-w-sm mx-auto rounded-lg shadow-lg"
             />
           </div>
         </div>
