@@ -52,10 +52,23 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="flex-1 flex items-center justify-center px-6 py-20">
-        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
+      <section className="relative flex-1 flex items-center justify-center px-6 py-20 overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/banner.mp4" type="video/mp4" />
+          {/* Your browser does not support the video tag. */}
+        </video>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl w-full flex flex-col items-center gap-10">
           {/* Text Section */}
-          <div className="md:w-1/2 text-center md:text-left">
+          <div className="md:w-1/2 text-center md:text-left text-white">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
               Hi, I&apos;m Malik Zohaib
             </h1>
@@ -70,23 +83,12 @@ export default function Home() {
               View My Work
             </Link>
           </div>
-
-          {/* Image Section */}
-          <div className="md:w-1/2">
-            <Image
-              height={500}
-              width={500}
-              src="/profile-pic.jpeg" // Replace with your actual image
-              alt="Malik Zohaib"
-              className="w-full  max-w-sm mx-auto rounded-lg shadow-lg"
-            />
-          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className=" mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+      <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full absolute bottom-0 left-0">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
           <div className="mt-2 md:mt-0 flex space-x-4">
             <a
@@ -98,6 +100,7 @@ export default function Home() {
             <a
               href="https://github.com/zohaib-180"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white"
             >
               GitHub
@@ -105,6 +108,7 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/feed/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white"
             >
               LinkedIn

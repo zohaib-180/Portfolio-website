@@ -51,30 +51,44 @@ export default function About() {
       </header>
 
       {/* About Section */}
-      <section className="flex-1 px-6 py-16 max-w-3xl mx-auto space-y-6 text-center md:text-left">
-        <h1 className="text-3xl font-bold">About</h1>
-        <p className="text-lg">
-          I’m a passionate developer who enjoys turning complex problems into
-          simple, beautiful solutions.
-        </p>
-        <p className="text-lg">
-          I specialize in Graphic Designing, web developement(React JS & Next
-          JS),Shopify developement & Digital Marketing. I love crafting clean UI
-          and performant web apps that make a difference.
-        </p>
-        <p className="text-lg">
-          Outside of coding, I enjoy learning new tech, designing side projects,
-          and contributing to open-source communities.
-        </p>
+      <section className="flex flex-col md:flex-row items-center md:items-start px-6 py-40 max-w-5xl mx-auto gap-10">
+        {/* Image Section */}
+        <div className="md:w-1/2">
+          <Image
+            height={500}
+            width={500}
+            src="/profile-pic.jpeg" // Replace with your actual image
+            alt="Malik Zohaib"
+            className="w-full  max-w-sm mx-auto rounded-lg shadow-lg"
+          />
+        </div>
+
+        {/* Text Section */}
+        <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
+          <h1 className="text-3xl font-bold">About</h1>
+          <p className="text-lg">
+            I’m a passionate developer who enjoys turning complex problems into
+            simple, beautiful solutions.
+          </p>
+          <p className="text-lg">
+            I specialize in Graphic Designing, web development (React JS & Next
+            JS), Shopify development & Digital Marketing. I love crafting clean
+            UI and performant web apps that make a difference.
+          </p>
+          <p className="text-lg">
+            Outside of coding, I enjoy learning new tech, designing side
+            projects, and contributing to open-source communities.
+          </p>
+        </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a0a0a] mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+      <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full absolute bottom-0 left-0">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
           <div className="mt-2 md:mt-0 flex space-x-4">
             <a
-              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+              href="mailto:your-email@example.com"
               className="hover:text-white"
             >
               Email
@@ -82,6 +96,7 @@ export default function About() {
             <a
               href="https://github.com/zohaib-180"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white"
             >
               GitHub
@@ -89,6 +104,7 @@ export default function About() {
             <a
               href="https://www.linkedin.com/feed/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white"
             >
               LinkedIn

@@ -68,21 +68,31 @@ export default function Projects() {
       </header>
 
       {/* Projects Section */}
-      <section className="flex-1 px-6 py-16 max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-center md:text-left">
-          Projects
-        </h1>
-        <p className="text-lg text-center md:text-left">
-          My work is available on{" "}
-          <a
-            href="https://github.com/zohaib-180"
-            target="_blank"
-            className="text-blue-600 hover:underline"
-          >
-            GitHub
-          </a>
-          . Feel free to check it out there!
-        </p>
+      <section className="flex-1 px-6 py-16 w-full mx-auto">
+        <h1 className="text-3xl font-bold mb-8 text-center">Projects</h1>
+        <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-center">
+          <Image
+            width={500}
+            height={500}
+            src="/Project-1.JPG"
+            alt="Project-1"
+            className="rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer"
+          />
+          <Image
+            width={500}
+            height={500}
+            src="/Project-2.JPG"
+            alt="Project-2"
+            className="rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer"
+          />
+          <Image
+            width={500}
+            height={500}
+            src="/Project-3.JPG"
+            alt="Project-3"
+            className="rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer"
+          />
+        </div>
       </section>
 
       {/* Footer */}
