@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function Home() {
+export default function About() {
   const [isDark, setIsDark] = useState(false);
   useEffect(() => {
     const root = document.documentElement;
@@ -14,9 +14,8 @@ export default function Home() {
       root.classList.remove("dark");
     }
   }, [isDark]);
-
   return (
-    <main className="flex flex-col min-h-screen bg-primary   transition-colors duration-300">
+    <main className="flex flex-col min-h-screen">
       {/* Header */}
       <header className=" shadow-sm sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
@@ -51,44 +50,31 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="flex-1 flex items-center justify-center px-6 py-20">
-        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
-          {/* Text Section */}
-          <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
-              Hi, I'm Malik Zohaib
-            </h1>
-            <p className="text-lg md:text-xl mb-8">
-              A professional Graphic Designer, web developer (React JS & Next
-              JS), Shopify developer & Digital Marketer.
-            </p>
-            <Link
-              href="/projects"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
-            >
-              View My Work
-            </Link>
-          </div>
-
-          {/* Image Section */}
-          <div className="md:w-1/2">
-            <img
-              src="/profile-pic.jpeg" // Replace with your actual image
-              alt="Malik Zohaib"
-              className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
+      {/* About Section */}
+      <section className="flex-1 px-6 py-16 max-w-3xl mx-auto space-y-6 text-center md:text-left">
+        <h1 className="text-3xl font-bold">About</h1>
+        <p className="text-lg">
+          I’m a passionate developer who enjoys turning complex problems into
+          simple, beautiful solutions.
+        </p>
+        <p className="text-lg">
+          I specialize in Graphic Designing, web developement(React JS & Next
+          JS),Shopify developement & Digital Marketing. I love crafting clean UI
+          and performant web apps that make a difference.
+        </p>
+        <p className="text-lg">
+          Outside of coding, I enjoy learning new tech, designing side projects,
+          and contributing to open-source communities.
+        </p>
       </section>
 
       {/* Footer */}
-      <footer className=" mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+      <footer className="bg-[#0a0a0a] mt-10">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
           <div className="mt-2 md:mt-0 flex space-x-4">
             <a
-              href="mailto:your-email@example.com"
+              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
               className="hover:text-white"
             >
               Email
