@@ -23,6 +23,12 @@ const services = [
     description: "Professional Shopify store setup and customization.",
     icon: "simple-icons:shopify",
   },
+  {
+    title: "Digital Marketing",
+    description:
+      "social media campaigns, and paid advertising to grow your brand online.",
+    icon: "mdi:bullhorn-outline",
+  },
 ];
 
 export default function ServicesPage() {
