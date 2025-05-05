@@ -1,27 +1,31 @@
+// app/services/page.tsx
 "use client";
 
-import Image from "next/image";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const projects = [
+const services = [
   {
-    name: "Portfolio Website",
-    description: "A personal portfolio built with Next.js and Tailwind CSS.",
+    title: "Graphic Design",
+    description:
+      "Creative designs for branding, social media, and marketing materials.",
+    icon: "mdi:palette",
   },
   {
-    name: "E-commerce Store",
+    title: "Web Development",
     description:
-      "An online store with shopping cart, product pages, and Stripe payment integration.",
+      "Responsive and modern websites using HTML, CSS, JavaScript, React & Next js.",
+    icon: "mdi:code-tags",
   },
   {
-    name: "Blog Platform",
-    description:
-      "A markdown-based blog with dynamic routing and SEO-friendly structure.",
+    title: "Shopify Setup",
+    description: "Professional Shopify store setup and customization.",
+    icon: "simple-icons:shopify",
   },
 ];
 
-export default function Projects() {
+export default function ServicesPage() {
   const [isDark, setIsDark] = useState(false);
   useEffect(() => {
     const root = document.documentElement;
@@ -32,7 +36,7 @@ export default function Projects() {
     }
   }, [isDark]);
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen bg-primary   transition-colors duration-300">
       {/* Header */}
       <header className=" shadow-sm sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
@@ -72,41 +76,35 @@ export default function Projects() {
         </nav>
       </header>
 
-      {/* Projects Section */}
-      <section className="flex-1 px-6 py-16 w-full mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-center">Projects</h1>
-        <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-center">
-          <Image
-            width={500}
-            height={500}
-            src="/Project-1.JPG"
-            alt="Project-1"
-            className="rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer"
-          />
-          <Image
-            width={500}
-            height={500}
-            src="/Project-2.JPG"
-            alt="Project-2"
-            className="rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer"
-          />
-          <Image
-            width={500}
-            height={500}
-            src="/Project-3.JPG"
-            alt="Project-3"
-            className="rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer"
-          />
+      {/* Services Section */}
+      <div className="mt-10 px-20">
+        <h1 className="text-4xl font-bold text-center mb-10">My Services</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-blue-200 p-6 rounded-2xl shadow hover:shadow-lg transition cursor-pointer"
+            >
+              <Icon
+                icon={service.icon}
+                className="text-indigo-600 w-8 h-8 mb-4"
+              />
+              <h2 className="text-xl text-black font-semibold mb-2">
+                {service.title}
+              </h2>
+              <p className="text-gray-600">{service.description}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
       {/* Footer */}
-      <footer className="bg-[#0a0a0a] mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+      <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full absolute bottom-0 left-0">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
           <div className="mt-2 md:mt-0 flex space-x-4">
             <a
-              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+              href="mailto:your-email@example.com"
               className="hover:text-white"
             >
               Email
@@ -114,6 +112,7 @@ export default function Projects() {
             <a
               href="https://github.com/zohaib-180"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white"
             >
               GitHub
@@ -121,6 +120,7 @@ export default function Projects() {
             <a
               href="https://www.linkedin.com/feed/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white"
             >
               LinkedIn
