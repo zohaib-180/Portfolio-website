@@ -93,14 +93,14 @@ export default function About() {
 
       {/* Footer */}
       <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full mt-auto">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
-          <div className="mt-2 md:mt-0 flex space-x-4 text-2xl">
+          <div className="mt-2 md:mt-0 flex space-x-4">
             <a
               href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
               className="hover:text-white"
             >
-              <Icon icon="mdi:email" />
+              Email
             </a>
             <a
               href="https://github.com/zohaib-180"
@@ -108,7 +108,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              <Icon icon="mdi:github" />
+              GitHub
             </a>
             <a
               href="https://www.linkedin.com/feed/"
@@ -116,7 +116,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              <Icon icon="mdi:linkedin" />
+              LinkedIn
             </a>
           </div>
         </div>

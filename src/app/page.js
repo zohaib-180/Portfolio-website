@@ -51,7 +51,7 @@ export default function Home() {
             <h1 className="text-4xl lg:text-6xl font-extrabold mb-6">
               Hi, I&apos;m Malik Zohaib
             </h1>
-            <p className="text-lg lg:text-2xl mb-8">
+            <p className="text-lg lg:text-2xl mb-8 mr-44">
               A professional Graphic Designer, Front-end developer (React JS &
               Next JS), Shopify developer & Digital Marketer.
             </p>
@@ -61,6 +61,30 @@ export default function Home() {
             >
               View My Work
             </Link>
+            <div className="flex space-x-4 text-3xl pt-5 ml-3.5">
+              <a
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+                aria-label="Email"
+              >
+                <Icon icon="mdi:email" />
+              </a>
+              <a
+                href="https://github.com/zohaib-180"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Icon icon="mdi:github" />
+              </a>
+              <a
+                href="https://www.linkedin.com/feed/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Icon icon="mdi:linkedin" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -69,9 +93,12 @@ export default function Home() {
       <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full h-[60px]">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
-          <div className="mt-2 md:mt-0 flex space-x-4 text-2xl">
-            <a href="mailto:someone@example.com" className="hover:text-white">
-              <Icon icon="mdi:email" />
+          <div className="mt-2 md:mt-0 flex space-x-4">
+            <a
+              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+              className="hover:text-white"
+            >
+              Email
             </a>
             <a
               href="https://github.com/zohaib-180"
@@ -79,7 +106,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              <Icon icon="mdi:github" />
+              GitHub
             </a>
             <a
               href="https://www.linkedin.com/feed/"
@@ -87,7 +114,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              <Icon icon="mdi:linkedin" />
+              LinkedIn
             </a>
           </div>
         </div>
