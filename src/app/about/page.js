@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 
 export default function About() {
   const [isDark, setIsDark] = useState(false);
@@ -91,12 +92,12 @@ export default function About() {
       <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full absolute bottom-0 left-0">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
-          <div className="mt-2 md:mt-0 flex space-x-4">
+          <div className="mt-2 md:mt-0 flex space-x-4 text-2xl">
             <a
-              href="mailto:your-email@example.com"
+              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
               className="hover:text-white"
             >
-              Email
+              <Icon icon="mdi:email" />
             </a>
             <a
               href="https://github.com/zohaib-180"
@@ -104,7 +105,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              GitHub
+              <Icon icon="mdi:github" />
             </a>
             <a
               href="https://www.linkedin.com/feed/"
@@ -112,7 +113,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              LinkedIn
+              <Icon icon="mdi:linkedin" />
             </a>
           </div>
         </div>

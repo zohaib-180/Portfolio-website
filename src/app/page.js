@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -16,9 +17,9 @@ export default function Home() {
   }, [isDark]);
 
   return (
-    <main className="flex flex-col min-h-screen bg-primary   transition-colors duration-300">
+    <main className="flex flex-col h-screen overflow-hidden bg-primary transition-colors duration-300">
       {/* Header */}
-      <header className=" shadow-sm sticky top-0 z-50">
+      <header className=" h-[60px] shadow-sm sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <ul className="flex space-x-6">
             <li>
@@ -57,9 +58,9 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative flex-1 flex items-center justify-center px-6 py-20 overflow-hidden">
+      <section className="relative  flex-1 flex items-center justify-center  overflow-hidden">
         {/* Background Video */}
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -67,40 +68,41 @@ export default function Home() {
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
           <source src="/banner.mp4" type="video/mp4" />
-          {/* Your browser does not support the video tag. */}
-        </video>
+        </video> */}
 
         {/* Content */}
-        <div className="relative z-10 max-w-6xl w-full flex flex-col items-center gap-10">
+        <div className="relative h-[calc(100vh-120px)]  w-full flex flex-col items-center gap-10 bg-[url('/banner.jpg')] bg-cover bg-center bg-no-repeat p-10">
           {/* Text Section */}
-          <div className="md:w-1/2 text-center md:text-left text-white">
+          <div className="h-full text-center md:text-left text-white flex flex-col justify-center">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
               Hi, I&apos;m Malik Zohaib
             </h1>
-            <p className="text-lg md:text-xl mb-8">
-              A professional Graphic Designer, web developer (React JS & Next
-              JS), Shopify developer & Digital Marketer.
+            <p className="text-lg md:text-xl mr-30 mb-8">
+              A professional Graphic Designer, Front-end developer (React JS &
+              Next JS), Shopify developer & Digital Marketer.
             </p>
-            <Link
-              href="/projects"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
-            >
-              View My Work
-            </Link>
+            <div>
+              <Link
+                href="/projects"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+              >
+                View My Work
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full absolute bottom-0 left-0">
+      <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full h-[60px]">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
-          <div className="mt-2 md:mt-0 flex space-x-4">
+          <div className="mt-2 md:mt-0 flex space-x-4 text-2xl">
             <a
-              href="mailto:your-email@example.com"
+              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
               className="hover:text-white"
             >
-              Email
+              <Icon icon="mdi:email" />
             </a>
             <a
               href="https://github.com/zohaib-180"
@@ -108,7 +110,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              GitHub
+              <Icon icon="mdi:github" />
             </a>
             <a
               href="https://www.linkedin.com/feed/"
@@ -116,7 +118,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              LinkedIn
+              <Icon icon="mdi:linkedin" />
             </a>
           </div>
         </div>

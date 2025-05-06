@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 
 export default function Contact() {
   const [isDark, setIsDark] = useState(false);
@@ -86,29 +87,31 @@ export default function Contact() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a0a0a] mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+      <footer className="bg-[#0a0a0a] text-gray-500 mt-10">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
-          <div className="mt-2 md:mt-0 flex space-x-4">
+          <div className="mt-2 md:mt-0 flex space-x-4 text-2xl">
             <a
               href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
               className="hover:text-white"
             >
-              Email
+              <Icon icon="mdi:email" />
             </a>
             <a
               href="https://github.com/zohaib-180"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white"
             >
-              GitHub
+              <Icon icon="mdi:github" />
             </a>
             <a
               href="https://www.linkedin.com/feed/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white"
             >
-              LinkedIn
+              <Icon icon="mdi:linkedin" />
             </a>
           </div>
         </div>
