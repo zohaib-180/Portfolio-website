@@ -42,33 +42,36 @@ export default function ServicesPage() {
     }
   }, [isDark]);
   return (
-    <main className="flex flex-col min-h-screen bg-primary   transition-colors duration-300">
+    <main className="flex flex-col min-h-screen bg-primary transition-colors duration-300">
       {/* Header */}
-      <header className=" shadow-sm sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <ul className="flex space-x-6">
+      <header className="shadow-sm sticky top-0 z-50 bg-primary">
+        <nav className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-8 py-4">
+          <ul className="flex space-x-4 md:space-x-6">
             <li>
-              <Link href="/" className="bg-primary hover:bg-primary/80">
+              <Link
+                href="/"
+                className="bg-primary hover:bg-primary/80 px-2 py-1 rounded"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-blue-600">
+              <Link href="/about" className="px-2 py-1">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-blue-600">
+              <Link href="/services" className="px-2 py-1">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-blue-600">
+              <Link href="/projects" className="px-2 py-1">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-blue-600">
+              <Link href="/contact" className="px-2 py-1">
                 Contact
               </Link>
             </li>
@@ -83,9 +86,11 @@ export default function ServicesPage() {
       </header>
 
       {/* Services Section */}
-      <div className="mt-10 px-20">
-        <h1 className="text-4xl font-bold text-center mb-10">My Services</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="mt-10 px-4 sm:px-10 lg:px-20 flex-grow">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
+          My Services
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -95,18 +100,20 @@ export default function ServicesPage() {
                 icon={service.icon}
                 className="text-indigo-600 w-8 h-8 mb-4"
               />
-              <h2 className="text-xl text-black font-semibold mb-2">
+              <h2 className="text-lg md:text-xl text-black font-semibold mb-2">
                 {service.title}
               </h2>
-              <p className="text-gray-600">{service.description}</p>
+              <p className="text-gray-600 text-sm md:text-base">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full absolute bottom-0 left-0">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
+      <footer className="bg-[#0a0a0a] text-gray-500 text-sm w-full mt-10">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} . All rights reserved.</p>
           <div className="mt-2 md:mt-0 flex space-x-4 text-2xl">
             <a

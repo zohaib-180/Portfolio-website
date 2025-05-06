@@ -18,38 +18,41 @@ export default function Contact() {
   return (
     <main className="flex flex-col min-h-screen">
       {/* Header */}
-      <header className=" shadow-sm sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <ul className="flex space-x-6">
+      <header className="shadow-sm sticky top-0 z-50">
+        <nav className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-6 py-4">
+          <ul className="flex space-x-4 lg:space-x-6">
             <li>
-              <Link href="/" className="bg-primary hover:bg-primary/80">
+              <Link
+                href="/"
+                className="bg-primary px-3 py-1 rounded hover:bg-primary/80"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-blue-600">
+              <Link href="/about" className="">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-blue-600">
+              <Link href="/services" className="">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-blue-600">
+              <Link href="/projects" className="">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-blue-600">
+              <Link href="/contact" className="">
                 Contact
               </Link>
             </li>
           </ul>
           <button
             onClick={() => setIsDark(!isDark)}
-            className="border px-3 py-1 rounded text-sm hover:bg-gray-100 dark:hover:bg-transparent transition cursor-pointer"
+            className="border px-3 py-1 rounded text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer"
           >
             {!isDark ? "☀️ Light" : "🌙 Dark"}
           </button>
@@ -57,7 +60,7 @@ export default function Contact() {
       </header>
 
       {/* Contact Section */}
-      <section className="flex-1 px-6 py-16 w-150 mx-auto">
+      <section className="flex-1 px-4 md:px-8 lg:px-20 xl:px-40 py-16 w-full max-w-6xl mx-auto">
         <h1 className="text-3xl font-semibold mb-6 text-center md:text-left">
           Contact
         </h1>
@@ -79,7 +82,7 @@ export default function Contact() {
           ></textarea>
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white text-sm px-3 py-2 rounded hover:bg-blue-700 transition mx-auto cursor-pointer"
           >
             Send Message
           </button>
@@ -88,8 +91,10 @@ export default function Contact() {
 
       {/* Footer */}
       <footer className="bg-[#0a0a0a] text-gray-500 mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
-          <p>© {new Date().getFullYear()} . All rights reserved.</p>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm">
+            © {new Date().getFullYear()} . All rights reserved.
+          </p>
           <div className="mt-2 md:mt-0 flex space-x-4 text-2xl">
             <a
               href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"

@@ -41,31 +41,34 @@ export default function Projects() {
   return (
     <main className="flex flex-col min-h-screen">
       {/* Header */}
-      <header className=" shadow-sm sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <ul className="flex space-x-6">
+      <header className="shadow-sm sticky top-0 z-50 transition">
+        <nav className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center px-4 lg:px-6 py-4 gap-4 lg:gap-0">
+          <ul className="flex flex-wrap justify-center lg:justify-start space-x-4 lg:space-x-6 text-sm lg:text-base">
             <li>
-              <Link href="/" className="bg-primary hover:bg-primary/80">
+              <Link
+                href="/"
+                className="bg-primary px-3 py-1 rounded hover:bg-primary/80"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-blue-600">
+              <Link href="/about" className="">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-blue-600">
+              <Link href="/services" className="">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-blue-600">
+              <Link href="/projects" className="">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-blue-600">
+              <Link href="/contact" className="">
                 Contact
               </Link>
             </li>
@@ -80,9 +83,9 @@ export default function Projects() {
       </header>
 
       {/* Projects Section */}
-      <section className="flex-1 px-6 py-16 w-full mx-auto">
+      <section className="flex-1 px-4 lg:px-6 py-16 w-full max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold mb-8 text-center">Projects</h1>
-        <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {images.map((src, index) => (
             <Image
               key={index}
@@ -94,38 +97,40 @@ export default function Projects() {
               onClick={() => openModal(src)}
             />
           ))}
-
-          {/* Modal */}
-          {selectedImage && (
-            <div
-              className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
-              onClick={closeModal}
-            >
-              <div className="relative">
-                <Image
-                  src={selectedImage}
-                  alt="Enlarged project"
-                  width={800}
-                  height={800}
-                  className="rounded-lg shadow-lg max-w-full max-h-[90vh]"
-                />
-                <button
-                  className="absolute top-2 right-2 text-white text-3xl font-bold cursor-pointer"
-                  onClick={closeModal}
-                >
-                  &times;
-                </button>
-              </div>
-            </div>
-          )}
         </div>
+
+        {/* Modal */}
+        {selectedImage && (
+          <div
+            className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
+            onClick={closeModal}
+          >
+            <div className="relative">
+              <Image
+                src={selectedImage}
+                alt="Enlarged project"
+                width={800}
+                height={800}
+                className="rounded-lg shadow-lg max-w-full max-h-[90vh]"
+              />
+              <button
+                className="absolute top-2 right-2 text-white text-3xl font-bold cursor-pointer"
+                onClick={closeModal}
+              >
+                &times;
+              </button>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Footer */}
       <footer className="bg-[#0a0a0a] text-gray-500 mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
-          <p>© {new Date().getFullYear()} . All rights reserved.</p>
-          <div className="mt-2 md:mt-0 flex space-x-4 text-2xl">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm">
+          <p className="text-center md:text-left">
+            © {new Date().getFullYear()} . All rights reserved.
+          </p>
+          <div className="mt-4 md:mt-0 flex space-x-4 text-2xl justify-center">
             <a
               href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
               className="hover:text-white"
