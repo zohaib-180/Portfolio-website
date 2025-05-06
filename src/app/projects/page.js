@@ -110,7 +110,7 @@ export default function Projects() {
                   className="rounded-lg shadow-lg max-w-full max-h-[90vh]"
                 />
                 <button
-                  className="absolute top-2 right-2 text-white text-3xl font-bold"
+                  className="absolute top-2 right-2 text-white text-3xl font-bold cursor-pointer"
                   onClick={closeModal}
                 >
                   &times;

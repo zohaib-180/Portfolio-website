@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main className="flex flex-col h-screen overflow-hidden bg-primary transition-colors duration-300">
       {/* Header */}
-      <header className=" h-[60px] shadow-sm sticky top-0 z-50">
+      <header className="h-[60px] shadow-sm sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <ul className="flex space-x-6">
             <li>
@@ -28,22 +28,22 @@ export default function Home() {
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-blue-600">
+              <Link href="/about" className="">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-blue-600">
+              <Link href="/services" className="">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-blue-600">
+              <Link href="/projects" className="">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-blue-600">
+              <Link href="/contact" className="">
                 Contact
               </Link>
             </li>
