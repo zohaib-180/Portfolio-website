@@ -52,7 +52,7 @@ export default function About() {
           </ul>
           <button
             onClick={() => setIsDark(!isDark)}
-            className="border px-3 py-1 rounded text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+            className="border px-3 py-1 rounded text-sm hover:bg-gray-100 dark:hover:bg-transparent transition cursor-pointer"
           >
             {!isDark ? "☀️ Light" : "🌙 Dark"}
           </button>
